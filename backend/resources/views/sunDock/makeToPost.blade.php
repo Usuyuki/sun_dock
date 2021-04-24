@@ -10,7 +10,7 @@
                     <h3 class="text-center text-4xl"> </h3>
                     <label class="block">
                         <span class="text-gray-700">内容</span>
-                        <textarea class="form-textarea mt-1 block w-full" rows="20" placeholder="ここに投稿したい内容を入力してください。"></textarea>
+                        <textarea name="content" class="form-textarea mt-1 block w-full" rows="20" placeholder="ここに投稿したい内容を入力してください。"></textarea>
                       </label>
                 </div>
            

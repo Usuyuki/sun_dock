@@ -67,8 +67,9 @@ class SunDockController extends Controller
      */
     public function post(Request $request){
         $this->validate($request,SunDock::$rules);
-
-        $identifier_id=Identifier::where("identifier","=", Cookie::get('sun_dock_identifier'))->first();
+        $identifier=Identifier::where("identifier",$request->cookie("sun_dock_identifier"))->first();
+        Log::debug($identifier);
+        $identifier_id=$identifier->id;
         $uuid=Str::uuid();
         $form=[
             "content"=>$request->content,
@@ -78,7 +79,6 @@ class SunDockController extends Controller
             'reaction_count_tear'=>0,
             'uuid'=>$uuid,
         ];
-        Log::debug($form);
         SunDock::create($form);
         return redirect("/SunDock");
         
