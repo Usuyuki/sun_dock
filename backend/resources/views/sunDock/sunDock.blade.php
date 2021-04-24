@@ -2,7 +2,8 @@
 @section("title","sun_dock_new")
 @section('content')
 
-    <div class="board-main">
+    <div class=" board-main">
+      
         <div class="flex m-12">
             @empty($sunDocks)
                 <h3 class="text-center text-3xl my-20">直近1週間の投稿はありません！</h3>
@@ -36,9 +37,5 @@
         </div>
 
     </div>
-   @if($is_identifier)
-   @else
-    @component("components.newvisitor")
-    @endcomponent
-   @endif
+  
 @endsection

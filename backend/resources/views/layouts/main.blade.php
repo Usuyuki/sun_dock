@@ -9,9 +9,14 @@
     <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 </head>
 <body>
-    <header class="border-b-2 w-screen">
+    <header class="relative border-b-2 w-screen">
         <h1 class="text-3xl text-center my-12">Sun_dock</h1>
     </header>
+    @if($is_identifier)
+    @else
+     @component("components.newvisitor")
+     @endcomponent
+    @endif
     <main>
 
         @yield('content')

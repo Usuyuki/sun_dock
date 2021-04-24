@@ -1,11 +1,10 @@
 <style>
     .sunDock-frame{
-    
         border:1px solid gray;
         border-radius:74% 26% 24% 76% / 54% 30% 70% 46% ;
     }
 </style>
-<div class="sunDock-frame m-4">
+{{-- <div class="sunDock-frame m-4">
     <a href="{{url('/SunDock')}}/{{$uuid}}">
         <div class="p-12">
             
@@ -23,4 +22,4 @@
             
         </div>
     </a>
-</div>
+</div> --}}
