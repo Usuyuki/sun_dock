@@ -62,4 +62,9 @@ DB_PASSWORD=secret
 
 ```
 php artisan migrate
+
+php artisan make:model 名前 -m
+php artisan make:seeder 名前TableSeeder
+php artisan db:seed
+php artisan migrate:fresh --seed
 ```
