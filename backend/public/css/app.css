@@ -31833,6 +31833,12 @@ video {
   --tw-backdrop-sepia: sepia(100%);
 }
 
+textarea {
+  resize: none;
+  width: 300px;
+  height: 200px;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

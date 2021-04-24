@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class SunDock extends Model
 {
-    use HasFactory;
+    public static $rules=array(
+        "content"=>"required|min:0|max:300"
+        );
+    protected $fillable = [
+        'content',"reaction_count_heart","reaction_count_cheer" ,"reaction_count_tear","identifier_id"
+    ];
 }

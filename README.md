@@ -68,3 +68,7 @@ php artisan make:seeder 名前TableSeeder
 php artisan db:seed
 php artisan migrate:fresh --seed
 ```
+
+```
+npm run dev でコンパイル
+```

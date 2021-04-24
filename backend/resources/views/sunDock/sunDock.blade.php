@@ -28,6 +28,10 @@
         @endforeach
             @endempty
         </div>
+        <div>
+            @component("components.plusButton")
+            @endcomponent
+        </div>
 
     </div>
 @endsection

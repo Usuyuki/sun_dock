@@ -4,3 +4,8 @@
 @tailwind components;
 
 @tailwind utilities;
+textarea {
+    resize: none;
+    width: 300px;
+    height: 200px;
+}

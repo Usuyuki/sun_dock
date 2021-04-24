@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 class SunDockController extends Controller
 {
+ 
     public function show(Request $request){
 
         // //識別子持っているか？
@@ -28,6 +29,22 @@ class SunDockController extends Controller
             'sunDocks'=>$sunDocks,
         ];
 
-        return view('sunDock',$data);
+        return view('sunDock/sunDock',$data);
+    }
+    public function makeToPost(Request $request){
+        return view('sunDock/makeToPost');
+    }
+    public function post(Request $request){
+        $this->validate($request,SunDock::$rules);
+        $sunDock=new SunDock;
+        $content=$request->content;
+        $identifier_id=;
+        $form={
+            "content"=>$content,
+            "identifier_id"=>$identifier_id,
+        };
+        unset($form["_token"]);//CSRF用の非表示フィールドなので予め削除
+        return redirect("/sunDock");
+        
     }
 }

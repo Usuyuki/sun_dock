@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',  [SunDockController::class, 'show']);
+Route::get('/SunDock',  [SunDockController::class, 'show']);
+Route::get('/SunDock/post',  [SunDockController::class, 'makeToPost']);
+Route::post('/SunDock/post',  [SunDockController::class, 'post']);
 Route::get('/hello', function () {
     return view('welcome');
 });
