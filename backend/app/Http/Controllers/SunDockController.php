@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Identifier;
 use App\Models\SunDock;
 use Carbon\Carbon;
@@ -43,7 +44,16 @@ class SunDockController extends Controller
         return view('sunDock/sunDock',$data);
     }
 
-
+    public function detail($uuid){
+        $sunDock=SunDock::where("uuid",$uuid)->first();
+        $comments=Comment::where("sunDock_id", $sunDock->id)->get();
+        $data=[
+            'sunDock'=>$sunDock,
+            'comments'=>$comments,
+        ];
+        Log::debug($data);
+        return view('sunDock/detail',$data);
+    }
 
     /**
      * 投稿作成ページを表示

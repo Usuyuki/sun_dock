@@ -9,6 +9,8 @@
             @else
             @foreach($sunDocks as $sunDock )
                 @component('components.sunDockFrame')
+                    @slot("uuid")
+                    {{$sunDock->uuid}}
                     @slot("content")
                     {{$sunDock->content}}
                     @endslot

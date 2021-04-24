@@ -3,7 +3,7 @@
         background-color: rgba(87, 87, 87,.7)
     }
 </style>
-<div class="absloute border-2 t-4 l-4" style="width:90vw;hegiht:90vh;">
+<div class="absloute border-2 t-4 l-4 z-10 bg-white" style="width:90vw;hegiht:90vh;">
     <h2 class="text-3xl text-center my-4">ようこそ！</h2>
     <a href="" class="text-2xl text-center my-2">使い方について</a>
     <a class="text-2xl text-center my-2">プライバシーポリシー</a>
