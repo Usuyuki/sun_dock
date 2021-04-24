@@ -16,6 +16,7 @@ class CreateSunDocksTable extends Migration
         Schema::create('sun_docks', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string("content")->comment("本文");
+            $table->unsignedBigInteger("reaction_count_heart");
             $table->unsignedBigInteger("reaction_count_cheer");
             $table->unsignedBigInteger("reaction_count_tear");
             $table->unsignedBigInteger("identifier_id");
