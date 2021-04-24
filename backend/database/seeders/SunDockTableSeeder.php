@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Str;
 class SunDockTableSeeder extends Seeder
 {
     /**
@@ -21,6 +21,7 @@ class SunDockTableSeeder extends Seeder
             'reaction_count_cheer'=>2,
             'reaction_count_tear'=>3,
             'identifier_id'=>1,
+            'uuid'=> Str::uuid(),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];
@@ -31,6 +32,7 @@ class SunDockTableSeeder extends Seeder
             'reaction_count_cheer'=>2,
             'reaction_count_tear'=>3,
             'identifier_id'=>2,
+            'uuid'=> Str::uuid(),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IdentifierController;
 use App\Http\Controllers\SunDockController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/SunDock',  [SunDockController::class, 'show']);
 Route::get('/SunDock/post',  [SunDockController::class, 'makeToPost']);
 Route::post('/SunDock/post',  [SunDockController::class, 'post']);
-Route::get('/hello', function () {
-    return view('welcome');
+Route::post('/SunDock/new',  [IdentifierController::class, 'makeIdentifier']);
+Route::get('/', function () {
+    return redirect("/SunDock");
 });

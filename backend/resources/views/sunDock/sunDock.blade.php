@@ -34,4 +34,9 @@
         </div>
 
     </div>
+   @if($is_identifier)
+   @else
+    @component("components.newvisitor")
+    @endcomponent
+   @endif
 @endsection

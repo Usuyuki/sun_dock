@@ -4,7 +4,7 @@
 
     <div class="justify-center flex">
       
-            <form  method="POST" action="/sunDock/post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <form  method="POST" action="/SunDock/post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 @csrf
                 <div class="mb-4">
                     <h3 class="text-center text-4xl"> </h3>
@@ -15,7 +15,7 @@
                 </div>
            
                 <div class="flex items-center justify-center">
-                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                    投稿
                   </button>
                 </div>
