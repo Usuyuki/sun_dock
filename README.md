@@ -17,35 +17,6 @@
 docker 参考
 https://qiita.com/ucan-lab/items/5fc1281cd8076c8ac9f4
 
-```
-$ docker-compose build
-
-$ docker-compose up -d
-
-$ docker-compose exec app php -r "file_exists('.env') || copy('.env.example', '.env');"
-
-$ docker-compose exec app composer install
-
-$ docker-compose exec app php artisan key:generate
-
-$ docker-compose exec app php artisan storage:link
-
-$ docker-compose exec app chmod -R 777 storage
-
-$ docker-compose exec app chmod -R 777 bootstrap/cache
-
-$ docker-compose exec app php artisan config:cache
-
-$ docker-compose exec app php artisan migrate:fresh --seed
-```
-
-```
-cd backend
-php artisan key:generate
-php artisan config:cache
-php artisan migrate:fresh
-```
-
 php artisan make:model -m
 
 docker-compose up -d --build
@@ -76,4 +47,19 @@ laravel インストール
  composer create-project --prefer-dist "laravel/laravel=8.*" .
  chown www-data storage/ -R
 
+```
+
+.env 修正
+
+```
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=laravel_local
+DB_USERNAME=phper
+DB_PASSWORD=secret
+```
+
+```
+php artisan migrate
 ```
