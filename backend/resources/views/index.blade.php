@@ -1,5 +1,11 @@
 @extends("layouts.main")
-@section("title","san_dock")
+@section("title","sun_dock_new")
 @section('content')
-    <h1 class="text-center">aa</h1>
+
+    <div class="board-main">
+        <div>
+            
+        </div>
+
+    </div>
 @endsection

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SunDockController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/',  [SunDockController::class, 'show']);
 Route::get('/hello', function () {
     return view('welcome');
 });
