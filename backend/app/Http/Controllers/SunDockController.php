@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Identifier;
+use App\Models\SunDock;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Log;
 class SunDockController extends Controller
 {
     public function show(Request $request){
@@ -13,25 +14,20 @@ class SunDockController extends Controller
         // if(){
         //     Identifier::
         // }
-        // //URLパラーメタからuuid拾ってデーターベースと照らし合わせる
+        //URLパラーメタからuuid拾ってデーターベースと照らし合わせる
         // $uuid =$request->id;
-        // $user = Mail::where('uuid', '=', $uuid)->first();
-        // $fold = Fold::where('id','=',$user->fold_id)->first();
-        // $scent =Scent::where('id','=',$user->scent_id)->first();
-        // $flower =Flower::where('id','=',$user->flower_id)->first();
-        // $sheet =Sheet::where('id','=',$user->sheet_id)->first();
+        $dt=new Carbon();
+        $before_a_week=$dt->subWeek();
+        Log::debug($before_a_week);
+        // $sunDocks = SunDock::all();
+        $sunDocks = SunDock::where('created_at', '>', $before_a_week)->get();
+        Log::debug( $sunDocks );
+  
 
+        $data=[
+            'sunDocks'=>$sunDocks,
+        ];
 
-        // $data=[
-        //     'for'=>$user->for,
-        //     'from'=>$user->from,
-        //     'text'=>$user->text,
-        //     'fold'=>$fold,
-        //     'scent'=>$scent,
-        //     'flower'=>$flower,
-        //     'sheet'=>$sheet
-        // ];
-
-        return view('index');
+        return view('sunDock',$data);
     }
 }

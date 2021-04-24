@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -20,6 +21,8 @@ class SunDockTableSeeder extends Seeder
             'reaction_count_cheer'=>2,
             'reaction_count_tear'=>3,
             'identifier_id'=>1,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
         ];
         DB::table("sun_docks")->insert($param);
         $param=[
@@ -28,6 +31,8 @@ class SunDockTableSeeder extends Seeder
             'reaction_count_cheer'=>2,
             'reaction_count_tear'=>3,
             'identifier_id'=>2,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
         ];
         DB::table("sun_docks")->insert($param);
     }
