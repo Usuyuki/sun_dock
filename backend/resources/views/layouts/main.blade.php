@@ -9,8 +9,10 @@
     <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 </head>
 <body>
+    @section('header')
     <header class="relative border-b-2 w-screen">
         <h1 class="text-3xl text-center my-12">Sun_dock</h1>
+        @show
     </header>
     @if($is_identifier)
     @else
@@ -21,7 +23,7 @@
 
         @yield('content')
         
-        @show
+        
     </main>
     <footer>
      
