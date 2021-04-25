@@ -69,7 +69,7 @@ class SunDockController extends Controller
         $data=[
             'sunDock'=>$sunDock,
             'comments'=>$comments,
-            'is_identifier'=>  $request->is_identifier,
+            'is_identifier'=>$request->is_identifier,
         ];
         Log::debug($data);
         return view('sunDock/detail',$data);

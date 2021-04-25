@@ -5,7 +5,7 @@
     }
 </style>
 <div class="sunDock-frame m-4">
-    <a href="{{url('/SunDock')}}/{{$uuid}}">
+    <a href="{{url('/SunDock/post')}}/{{$uuid}}">
         <div class="p-12">
             
             

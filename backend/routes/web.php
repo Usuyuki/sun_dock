@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\IdentifierController;
 use App\Http\Controllers\SunDockController;
 use App\Http\Middleware\CheckMiddleware;
+use App\Models\Comment;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +22,7 @@ Route::get('/SunDock',  [SunDockController::class, 'show'])->middleware(CheckMid
 Route::post('/SunDock/new',  [IdentifierController::class, 'makeIdentifier'])->middleware(CheckMiddleware::class);
 Route::get('/SunDock/post',  [SunDockController::class, 'makeToPost'])->middleware(CheckMiddleware::class);
 Route::post('/SunDock/post',  [SunDockController::class, 'post'])->middleware(CheckMiddleware::class);
+Route::post('/SunDock/comment',  [CommentController::class, 'post'])->middleware(CheckMiddleware::class);
 Route::get('/SunDock/post/{uuid}',  [SunDockController::class, 'detail'])->middleware(CheckMiddleware::class);
 Route::get('/', function () {
     return redirect("/SunDock");
