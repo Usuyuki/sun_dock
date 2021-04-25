@@ -31839,6 +31839,10 @@ textarea {
   height: 200px;
 }
 
+.potta {
+  font-family: "Potta One", cursive;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

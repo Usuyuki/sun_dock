@@ -23,6 +23,7 @@ Route::post('/SunDock/new',  [IdentifierController::class, 'makeIdentifier'])->m
 Route::get('/SunDock/post',  [SunDockController::class, 'makeToPost'])->middleware(CheckMiddleware::class);
 Route::post('/SunDock/post',  [SunDockController::class, 'post'])->middleware(CheckMiddleware::class);
 Route::post('/SunDock/comment',  [CommentController::class, 'post'])->middleware(CheckMiddleware::class);
+Route::post('/SunDock/reaction',  [ReactionController::class, 'update'])->middleware(CheckMiddleware::class);
 Route::get('/SunDock/post/{uuid}',  [SunDockController::class, 'detail'])->middleware(CheckMiddleware::class);
 Route::get('/', function () {
     return redirect("/SunDock");
