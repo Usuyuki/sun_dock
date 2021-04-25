@@ -29,12 +29,13 @@
                     <textarea name="content" class="form-textarea mt-1 block w-full" rows="20" placeholder="ここに投稿したい内容を入力してください。"></textarea>
                   </label>
             </div>
-       
+            <input type="hidden" name="uuid" value="{{$sunDock->uuid}}">
             <div class="flex items-center justify-center">
               <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                投稿
               </button>
             </div>
+            
           </form>
         </div>
         <div class="flex m-12">

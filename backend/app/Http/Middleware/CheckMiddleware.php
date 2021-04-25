@@ -21,7 +21,6 @@ class CheckMiddleware
                 $is_identifier=true;
             }else{
                 $is_identifier=false;
-                Log::debug("hasIdentfiterKey");
             }
            
             $request->merge(['is_identifier'=> $is_identifier,]);

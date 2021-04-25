@@ -11,7 +11,7 @@
 <body>
     @section('header')
     <header class="relative border-b-2 w-screen">
-        <h1 class="text-3xl text-center my-4"><a href="{{url("/")}}">Sun_dock</a></h1>
+        <h1 class="text-3xl text-center my-4"><a href="{{url("/")}}">さんどっく！</a></h1>
         @show
     </header>
     @if($is_identifier)
